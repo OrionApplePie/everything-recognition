@@ -121,3 +121,4 @@ python run.py
 4. [Цифровое видео](https://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE)
 5. [INTLAB- ГЛОССАРИЙ ОСНОВНЫХ ТЕРМИНОВ И ОПРЕДЕЛЕНИЙ](https://www.intlab.com/glossary)
 6. [Метод Виолы-Джонса (Viola-Jones) как основа для распознавания лиц](https://habr.com/ru/post/133826/)
+7. [Face Detection using Haar Cascades](https://docs.opencv.org/3.1.0/d7/d8b/tutorial_py_face_detection.html#gsc.tab=0)
