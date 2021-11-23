@@ -11,7 +11,7 @@ def show_frame(frame):
     cv2.imshow('Video', frame)
 
 
-def draw_sqare(frame, color):
+def draw_sqare(frame, x, y, w, h, color):
         cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 
 
@@ -24,7 +24,7 @@ def get_cascades():
     return cascades
 
 
-if __name__ == "__main__":
+def main():
     cascades = get_cascades()
     video_capture = cv2.VideoCapture(0)
     while True:
@@ -41,10 +41,14 @@ if __name__ == "__main__":
             )]
             for capture in captures:
                 for (x, y, w, h) in capture:
-                    draw_sqare(webcam_frame, color)
+                    draw_sqare(webcam_frame, x, y, w, h, color)
         show_frame(webcam_frame)
 
         if is_user_wants_quit():
             break
     video_capture.release()
     cv2.destroyAllWindows()
+
+
+if __name__ == "__main__":
+    main()
