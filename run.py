@@ -4,9 +4,11 @@ import cv2
 
 from config import CASCADES
 
+ESC_CODE = 27
+
 
 def is_user_wants_quit():
-    return cv2.waitKey(1) & 0xFF == ord('q')
+    return cv2.waitKey(3) & 0xFF == ESC_CODE
 
 
 def show_frame(frame):
@@ -49,6 +51,7 @@ def main():
 
         if is_user_wants_quit():
             break
+
     video_capture.release()
     cv2.destroyAllWindows()
 
