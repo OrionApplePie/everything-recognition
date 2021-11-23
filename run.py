@@ -11,17 +11,16 @@ def show_frame(frame):
     cv2.imshow('Video', frame)
 
 
-def draw_sqare(frame, x, y, w, h, color):
+def draw_rect(frame, x, y, w, h, color):
         cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 
 
 def get_cascades():
-    cascades = [
+    return [
         (cv2.CascadeClassifier(cascade['path']), cascade['color'])
-        for title, cascade in CASCADES.items()
+        for _, cascade in CASCADES.items()
         if cascade['draw']
     ]
-    return cascades
 
 
 def main():
@@ -41,7 +40,7 @@ def main():
             )]
             for capture in captures:
                 for (x, y, w, h) in capture:
-                    draw_sqare(webcam_frame, x, y, w, h, color)
+                    draw_rect(webcam_frame, x, y, w, h, color)
         show_frame(webcam_frame)
 
         if is_user_wants_quit():
