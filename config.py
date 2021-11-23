@@ -12,11 +12,11 @@ CASCADES = {
     'Smile': {
         'path': 'haarcascades/faces/haarcascade_smile.xml',
         'color': (0, 255, 0),
-        'draw': False
+        'draw': True
     },
     'Eyes': {
         'path': 'haarcascades/faces/haarcascade_eye.xml',
-        'color': (0, 255, 0),
+        'color': (0, 0, 255),
         'draw': True
     },
     'Full body': {
